@@ -1,9 +1,3 @@
-const users = [
-    { username: "admin", password: "admin123" },
-    { username: "user1", password: "password1" },
-    { username: "user2", password: "password2" }
-];
-
 document.getElementById('loginButton').addEventListener('click', () => {
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value.trim();
