@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Upload App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button id="loginButton">Login</button>
+        <p id="loginErrorMessage" class="error-message" style="display: none;"></p>
+    </div>
+
+    <div class="container" id="uploadContainer" style="display: none;">
+        <h1>Excel Upload App</h1>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>To upload your Excel file, please ensure the following:</p>
+            <ul>
+                <li>The first row should contain the headers:</li>
+                <li><strong>ip_no, uan, name, epf wage, eps wage, edli wage, gross wage, ncp, doe</strong></li>
+                <li>Make sure the data is filled correctly under each header.</li>
+                <li>The file format should be either <strong>.xlsx</strong> or <strong>.xls</strong>.</li>
+            </ul>
+        </div>
+        <input type="file" id="fileInput" accept=".xlsx, .xls" />
+        <button id="uploadButton">Upload</button>
+        <p id="errorMessage" class="error-message" style="display: none;"></p>
+        <a id="downloadText" style="display: none;">Download Text File</a>
+        <a id="downloadExcel" style="display: none;">Download Excel File</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
